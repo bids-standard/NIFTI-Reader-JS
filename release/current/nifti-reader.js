@@ -2303,8 +2303,6 @@
             }
             let ecode = _Utils.getIntAt(data, extensionByteIndex + 4, extensionLittleEndian);
             let edata = data.buffer.slice(extensionByteIndex + 8, extensionByteIndex + esize);
-            console.log("extensionByteIndex: " + (extensionByteIndex + 8) + " esize: " + esize);
-            console.log(edata);
             let extension = new nifti_extension_1.NIFTIEXTENSION(esize, ecode, edata, extensionLittleEndian);
             extensions.push(extension);
             extensionByteIndex += esize;
@@ -3609,7 +3607,7 @@
         if (header) {
           header.readHeader(data);
         } else {
-          console.error("That file does not appear to be NIFTI!");
+          throw new Error("That file does not appear to be NIFTI!");
         }
         return header;
       }
