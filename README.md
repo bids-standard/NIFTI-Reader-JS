@@ -1,3 +1,5 @@
+This is a fork of the [upstream](https://github.com/rii-mango/NIFTI-Reader-JS/) with fixes for the [BIDS validator](https://jsr.io/@bids/validator).
+
 # NIFTI-Reader-JS
 A JavaScript [NIfTI](http://nifti.nimh.nih.gov/) file format reader.  This reader supports both NIfTI-1 and NIfT1-2 file formats, both compressed (.nii.gz) and uncompressed (.nii).
 
